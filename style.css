@@ -29,8 +29,11 @@ body {
     --main-color: #FF702a;
     --text-color: #FFFFFF;
     --bg-color: #1E1C2A;
+    --box-bg-color: #FEEEE7;
     --big-font: 3.5rem;
     --h2-font: 2.25rem;
+    --h3-font: 1.3rem;
+    --h4-font: 1.1rem;
     --p-font: 0.9rem;
 }
 
@@ -144,7 +147,7 @@ body {
     width: 500px;
 }
 
-.about-text .about-span {
+.about-text span {
     font-size: var(--big-font);
     font-weight: 700;
     color: var(--main-color);
@@ -160,4 +163,94 @@ body {
     font-size: var(--p-font);
     margin: 0.8rem 0 1.8rem;
     line-height: 1.8;
+}
+
+/* Menu Section */
+
+.menu-container {
+    padding: 50px 50px;
+}
+
+.menu-heading {
+    text-align: center;
+}
+
+.menu-heading span {
+    font-size: var(--big-font);
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.menu-heading h2 {
+    font-size: var(--h2-font);
+    font-weight: 600;
+    margin: 0.5rem 0 1rem;
+}
+
+.menu-box-container {
+    margin-top: 4rem;
+    justify-content: space-between;
+}
+
+.box {
+    flex-direction: column;
+    justify-content: center;
+    min-width: 25vw;
+    background: var(--box-bg-color);
+    padding: 20px;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.box-image {
+    width: 220px;
+    height: 220px;
+}
+
+.box-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.box h3 {
+    font-size: var(--h3-font);
+    color: var(--bg-color);
+    margin: 10px 0 0;
+}
+
+.box h4 {
+    font-size: var(--h4-font);
+    font-weight: 400;
+    color: var(--bg-color);
+    margin: 10px 0 15px;
+}
+
+.box span {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    font-weight: 600;
+    padding: 2px 15px;
+    border-radius: 0.5rem;
+    background: var(--bg-color);
+}
+
+.box span:hover {
+    background: var(--main-color);
+    color: var(--text-color);
+    transition: 0.1s ease-out;
+}
+
+.box .bx {
+    background: var(--main-color);
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem;
+    padding: 10px 12px;
+    border-radius: 0 0.5rem 0;
+}
+
+.box .bx:hover {
+    transform: scale(1.3);
+    transition: 0.2s ease-out;
 }
