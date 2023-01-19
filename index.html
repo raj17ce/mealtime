@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MealTime - Feel the meal</title>
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./style2.css">
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     </head>
     <body>
@@ -20,7 +21,7 @@
 
                 <i class="bx bx-menu" id="menu-icon"></i>
 
-                <ul class="navbar flex">
+                <ul class="navbar flex" id="navbar">
                     <li><a href="#home"> Home </a></li>
                     <li><a href="#about"> About </a></li>
                     <li><a href="#menu"> Menu </a> </li>
@@ -206,7 +207,7 @@
                         </ul>
                     </div>
 
-                    <div class="col">
+                    <div class="col social-col">
                         <h4>Contact Us</h4>
                         <div class="social flex">
                             <a href="#"><i class="bx bxl-facebook"></i></a>
@@ -221,5 +222,22 @@
          </footer>
 
          <!-- Footer Section Ends -->
+
+         <!-- Script for menu bar Starts-->
+
+         <script>
+            let menu = document.getElementById("menu-icon");
+            let nav = document.getElementById("navbar");
+
+            menu.addEventListener("click", () => {
+                nav.classList.toggle("active");
+            });
+
+            window.onscroll = () => {
+                nav.classList.remove("active");
+            };
+         </script>
+
+         <!-- Script for menu bar Ends-->
     </body>
 </html>

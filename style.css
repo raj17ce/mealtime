@@ -40,6 +40,7 @@ body {
 .flex{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -194,12 +195,14 @@ body {
 
 .box {
     flex-direction: column;
+    margin-inline: auto;
     justify-content: center;
     min-width: 32%;
     background: var(--box-bg-color);
     padding: 20px;
     border-radius: 0.5rem;
     position: relative;
+    margin-bottom: 10px;
 }
 
 .box-image {
@@ -332,7 +335,7 @@ body {
 }
 
 .col {
-    max-width: 25%;
+    min-width: 25%;
 }
 
 .col h4 {
@@ -391,4 +394,131 @@ body {
     transform: scale(1.2);
     color: var(--bg-color);
     background: var(--text-color);
+}
+
+/* Media Queries */
+
+@media (max-width: 1140px) {
+    section {
+        padding: 50px 8%;
+    }
+
+    .home-container .home-text {
+        max-width: 100%;
+        margin-inline: auto;
+    }
+
+    .home-container .home-image {
+        margin-inline: auto;
+    }
+
+    .about-container .about-image {
+        margin-inline: auto;
+    }
+
+    .about-container .about-text {
+        max-width: 80%;
+        margin-inline: auto;
+    }
+
+    .s-box {
+        max-width: 100%;
+        margin-inline: auto;
+    }
+
+    .col {
+        min-width: 50%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 720px) {
+
+    html {
+        font-size: 13px;
+    }
+
+    #menu-icon {
+        display: initial;
+        color: var(--text-color);
+    }
+
+    .header-container {
+        position: relative;
+    }
+
+    .logo {
+        margin-inline: auto;
+    }
+
+    .header-container .navbar {
+        position: absolute;
+        top: -320px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: #2B2640;
+        transition: 0.2s ease-out;
+    }
+
+    .header-container .navbar.active {
+        top: 80px;
+    }
+    .navbar a {
+        padding: 1.5rem;
+        display: block;
+    }
+
+    .col {
+        min-width: 55%;
+    }
+
+    .menu-box-container {
+        margin-top: 2rem;
+    }
+    
+    .s-box-container {
+        justify-content: space-between;
+        gap: 25px;
+        margin: 30px 0;
+    }
+    
+    .cta-container {
+        padding: 25px 0;
+        margin: 25px auto;
+    }
+
+    .header-container {
+        justify-content: space-between;
+        padding: 15px 0;
+    }
+    
+    .home-container {
+        gap: 25px;
+        padding: 25px;
+    }
+    
+    .about-container {
+        gap: 25px;
+        padding: 25px;
+    }
+    
+    .menu-container {
+        padding: 25px;
+    }
+    .services-container {
+        padding: 25px;
+    }
+    
+    .col-container {
+        padding: 15px 80px;
+        margin-inline: auto;
+        justify-content: center;
+    }
+
+    .col .social {
+        gap: 10px;
+    }
 }
